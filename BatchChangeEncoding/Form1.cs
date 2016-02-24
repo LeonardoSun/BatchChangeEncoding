@@ -41,7 +41,7 @@ namespace BatchChangeEncoding
                 string header = "////////////\r\n//    created by 孙庆号\r\n////////////\r\n\r\n";
                 if (!s.MatchHeader(header))
                     s = header + s;
-                var encoding = new System.Text.UTF8Encoding(false);
+                var encoding = new System.Text.UTF8Encoding(true);
                 File.WriteAllText(f.FullName, s, /*Encoding.UTF8*/encoding);
             }
         }
